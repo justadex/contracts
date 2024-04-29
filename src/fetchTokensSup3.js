@@ -52,35 +52,57 @@ async function main() {
         const accounts = await ethers.getSigners();
         const [deployer] = accounts;
 
-        const factoryContract = new ethers.Contract(factoryAddress, factoryABI, deployer);
+        try {
+            let localBlock = 3061677;
+            const contract = new ethers.Contract(factoryAddress, factoryABI, deployer);
 
-        // Specify the block number from which to start listening to events
-        const startBlock = 3061677; // Update with the desired block number
+            const filter = {
+                address: this.contractAddress,
+                topics: [utils.id("Mint(address,address,int24,int24,uint128,uint256,uint256)")],
+                fromBlock: startBlock,
+                toBlock: endBlock
+            };
 
-        // Subscribe to PoolCreated event from the specified block
-        factoryContract.on("PoolCreated", { fromBlock: startBlock }, async (token0, token1) => {
-            try {
-                // Check if the token pair is not duplicate
-                if (token0 !== ethers.constants.AddressZero && token1 !== ethers.constants.AddressZero) {
-                    // Create a token pair string and save it
-                    const tokenPair = [token0, token1].sort().join("-");
-                    console.log("Found token pair:", tokenPair);
-                    fs.appendFileSync(filename, tokenPair + "\n");
-                }
-            } catch (error) {
-                console.error("Error processing event:", error);
+            const events = await this.provider.getLogs(filter);
+            console.log(`Fetching logs for ${Pool.sPairAddress} from block ${startBlock} to block ${endBlock}...`);
+
+
+            for (const event of events) {
+                console.log(event);
+                const parsedEvent = contract.interface.parseLog(event);
+                let reserves = [];
+                parsedEvent.args.forEach((arg, index) => {
+                    console.log(index + " : " + arg);
+                    reserves.push(arg.toString());
+                });
+                // updated pairs in database;
+                // updateReservesInPair(reserves, Pool)
             }
-        });
+            // updateBlockInPair(Pool.iPoolPairId, endBlock);
 
-        console.log("Listening for PoolCreated events from block", startBlock, "...");
+            // Fetch logs for the next batch
+            const latestBlock = await this.provider.getBlockNumber();
+            if (endBlock < latestBlock) {
+                const newStartBlock = endBlock + 1;
+                const newEndBlock = Math.min(endBlock + 10, latestBlock);
+                listenForEvents(Pool, newStartBlock, newEndBlock);
+            } else {
+                const latestBlock = await this.provider.getBlockNumber();
+                setTimeout(() => {
+                    const newStartBlock = endBlock + 1;
+                    const newEndBlock = Math.min(endBlock + 10, latestBlock);
+                    this.listenForEvents(Pool, newStartBlock, newEndBlock);
+                }, 1000)
+            }
+        } catch (error) {
+            const latestBlock = await this.provider.getBlockNumber();
+            if (this.localBlock + 10 > latestBlock) {
+                this.listenForEvents(Pool, this.localBlock, latestBlock);
+            } else {
+                this.listenForEvents(Pool, this.localBlock, this.localBlock + 10);
+            }
+        }
 
-        // Wait for some time to collect events (you can modify this)
-        await new Promise((resolve) => setTimeout(resolve, 60000));
-
-        // Unsubscribe from events
-        factoryContract.removeAllListeners("PoolCreated");
-
-        console.log("Finished collecting token pairs.");
     } catch (error) {
         console.error("Error:", error);
     }
