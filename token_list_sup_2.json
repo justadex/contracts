@@ -1,0 +1,254 @@
+[
+  {
+    "token0": "0x4200000000000000000000000000000000000006",
+    "token1": "0xd988097fb8612cc24eeC14542bC03424c656005f",
+    "liquidity": {
+      "reserve0": "2377819961586516818",
+      "reserve1": "7555274629",
+      "lastUpdate": "1714405991"
+    }
+  },
+  {
+    "token0": "0x4200000000000000000000000000000000000006",
+    "token1": "0xf0F161fDA2712DB8b566946122a5af183995e2eD",
+    "liquidity": {
+      "reserve0": "523172713011877081",
+      "reserve1": "1657845593",
+      "lastUpdate": "1714406429"
+    }
+  },
+  {
+    "token0": "0x4200000000000000000000000000000000000006",
+    "token1": "0x4295CfA56B7421E24dAc2B6EE0274E8169B503f7",
+    "liquidity": {
+      "reserve0": "1",
+      "reserve1": "1140264",
+      "lastUpdate": "1706778543"
+    }
+  },
+  {
+    "token0": "0xd988097fb8612cc24eeC14542bC03424c656005f",
+    "token1": "0xf0F161fDA2712DB8b566946122a5af183995e2eD",
+    "liquidity": {
+      "reserve0": "248713892",
+      "reserve1": "248465231",
+      "lastUpdate": "1714400171"
+    }
+  },
+  {
+    "token0": "0xcDd475325D6F564d27247D1DddBb0DAc6fA0a5CF",
+    "token1": "0xd988097fb8612cc24eeC14542bC03424c656005f",
+    "liquidity": {
+      "reserve0": "2970",
+      "reserve1": "1867691",
+      "lastUpdate": "1714147411"
+    }
+  },
+  {
+    "token0": "0xcDd475325D6F564d27247D1DddBb0DAc6fA0a5CF",
+    "token1": "0xf0F161fDA2712DB8b566946122a5af183995e2eD",
+    "liquidity": {
+      "reserve0": "3768936",
+      "reserve1": "2337214064",
+      "lastUpdate": "1714406381"
+    }
+  },
+  {
+    "token0": "0x4200000000000000000000000000000000000006",
+    "token1": "0xcDd475325D6F564d27247D1DddBb0DAc6fA0a5CF",
+    "liquidity": {
+      "reserve0": "45333013497391391",
+      "reserve1": "232369",
+      "lastUpdate": "1714392025"
+    }
+  },
+  {
+    "token0": "0x4200000000000000000000000000000000000006",
+    "token1": "0xC655197Dac6f8cc2bB81841a1BeBFB64cF2bF069",
+    "liquidity": {
+      "reserve0": "11211095497628",
+      "reserve1": "119351362340233684918050",
+      "lastUpdate": "1707158537"
+    }
+  },
+  {
+    "token0": "0xC655197Dac6f8cc2bB81841a1BeBFB64cF2bF069",
+    "token1": "0xCF8cbEc21348F2163b0489E7F191A093ba13E0C1",
+    "liquidity": {
+      "reserve0": "133768002507438186952198",
+      "reserve1": "133770000000000000000000",
+      "lastUpdate": "1707158423"
+    }
+  },
+  {
+    "token0": "0x1669c7306212CB7Ef3f0c46653A1ebbF3809Ea34",
+    "token1": "0x4200000000000000000000000000000000000006",
+    "liquidity": {
+      "reserve0": "19100902004",
+      "reserve1": "1",
+      "lastUpdate": "1708683267"
+    }
+  },
+  {
+    "token0": "0xd0d8e3e3b5E402604f9b3b1Db6bD62930DA8F859",
+    "token1": "0xd988097fb8612cc24eeC14542bC03424c656005f",
+    "liquidity": {
+      "reserve0": "15792403237",
+      "reserve1": "1",
+      "lastUpdate": "1708478073"
+    }
+  },
+  {
+    "token0": "0x4200000000000000000000000000000000000006",
+    "token1": "0xB2739a38618E0437fB9216F9e487ec081dB95718",
+    "liquidity": {
+      "reserve0": "1000000000000000",
+      "reserve1": "1000000000000000000000",
+      "lastUpdate": "1708646983"
+    }
+  },
+  {
+    "token0": "0x2416092f143378750bb29b79eD961ab195CcEea5",
+    "token1": "0xd988097fb8612cc24eeC14542bC03424c656005f",
+    "liquidity": {
+      "reserve0": "308790977644403173",
+      "reserve1": "962619040",
+      "lastUpdate": "1714401909"
+    }
+  },
+  {
+    "token0": "0x2416092f143378750bb29b79eD961ab195CcEea5",
+    "token1": "0xf0F161fDA2712DB8b566946122a5af183995e2eD",
+    "liquidity": {
+      "reserve0": "59962553416810533",
+      "reserve1": "186691369",
+      "lastUpdate": "1714401909"
+    }
+  },
+  {
+    "token0": "0x12D8CE035c5DE3Ce39B1fDD4C1d5a745EAbA3b8C",
+    "token1": "0xDF474B7109b73b7D57926d43598D5934131136b2",
+    "liquidity": {
+      "reserve0": "7373389582833053224",
+      "reserve1": "520491109111630921134540",
+      "lastUpdate": "1714372275"
+    }
+  },
+  {
+    "token0": "0x2416092f143378750bb29b79eD961ab195CcEea5",
+    "token1": "0x4200000000000000000000000000000000000006",
+    "liquidity": {
+      "reserve0": "265756190488070660",
+      "reserve1": "261820442313633671",
+      "lastUpdate": "1714382421"
+    }
+  },
+  {
+    "token0": "0x4200000000000000000000000000000000000006",
+    "token1": "0xBD480Cc0AB6E92ed89125D39C2B918A8DFf4491b",
+    "liquidity": {
+      "reserve0": "38460998653573886",
+      "reserve1": "176337045671423751597282136",
+      "lastUpdate": "1712661645"
+    }
+  },
+  {
+    "token0": "0x1Ca797d7CcDd080A3571398a596a470A8Cbe1f7a",
+    "token1": "0x4200000000000000000000000000000000000006",
+    "liquidity": {
+      "reserve0": "15052911",
+      "reserve1": "1",
+      "lastUpdate": "1711528303"
+    }
+  },
+  {
+    "token0": "0x1Ca797d7CcDd080A3571398a596a470A8Cbe1f7a",
+    "token1": "0x638ac0563543dc14A16A5C0105375982b4b5B1a7",
+    "liquidity": {
+      "reserve0": "240",
+      "reserve1": "4184",
+      "lastUpdate": "1711529033"
+    }
+  },
+  {
+    "token0": "0x028227c4dd1e5419d11Bb6fa6e661920c519D4F5",
+    "token1": "0x4200000000000000000000000000000000000006",
+    "liquidity": {
+      "reserve0": "6131886487816570",
+      "reserve1": "6283393012525519",
+      "lastUpdate": "1714058849"
+    }
+  },
+  {
+    "token0": "0x4200000000000000000000000000000000000006",
+    "token1": "0x839126518ae3106229Ff825D7efCE1179f04293D",
+    "liquidity": {
+      "reserve0": "980133147893814",
+      "reserve1": "918333374588479912869130424",
+      "lastUpdate": "1711972089"
+    }
+  },
+  {
+    "token0": "0x028227c4dd1e5419d11Bb6fa6e661920c519D4F5",
+    "token1": "0x2416092f143378750bb29b79eD961ab195CcEea5",
+    "liquidity": {
+      "reserve0": "12175402145196",
+      "reserve1": "12175402145196",
+      "lastUpdate": "1711983129"
+    }
+  },
+  {
+    "token0": "0x028227c4dd1e5419d11Bb6fa6e661920c519D4F5",
+    "token1": "0xf0F161fDA2712DB8b566946122a5af183995e2eD",
+    "liquidity": {
+      "reserve0": "85396527331681",
+      "reserve1": "287028",
+      "lastUpdate": "1713188221"
+    }
+  },
+  {
+    "token0": "0x7906c8893362F1475e05C0647ed40c76A4ec9B72",
+    "token1": "0xa8a52706af50DAb1b39F42E94C8Debfc43e3dec1",
+    "liquidity": {
+      "reserve0": "173021645465650579096900",
+      "reserve1": "103504410269060829756734",
+      "lastUpdate": "1714037951"
+    }
+  },
+  {
+    "token0": "0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A",
+    "token1": "0x4200000000000000000000000000000000000006",
+    "liquidity": {
+      "reserve0": "15684153683757405",
+      "reserve1": "16304911257571783",
+      "lastUpdate": "1714396135"
+    }
+  },
+  {
+    "token0": "0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A",
+    "token1": "0xf0F161fDA2712DB8b566946122a5af183995e2eD",
+    "liquidity": {
+      "reserve0": "996846897883268",
+      "reserve1": "3299563",
+      "lastUpdate": "1714251105"
+    }
+  },
+  {
+    "token0": "0x2388dc785f1aB1518E9373d8B96F080adDB299dc",
+    "token1": "0xd988097fb8612cc24eeC14542bC03424c656005f",
+    "liquidity": {
+      "reserve0": "687853810210",
+      "reserve1": "1",
+      "lastUpdate": "1714121123"
+    }
+  },
+  {
+    "token0": "0xc50A1A2A79B44C75F7441d01716576BAF01efe59",
+    "token1": "0xfd9Da2d66cc2A076704583eB89f7eE9916043f1C",
+    "liquidity": {
+      "reserve0": "4201337000000000000000000",
+      "reserve1": "4201337000000000000000000",
+      "lastUpdate": "1714300835"
+    }
+  }
+]

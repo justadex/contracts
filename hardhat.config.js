@@ -91,6 +91,11 @@ module.exports = {
       url: AMOY_RPC,
       accounts: [AMOY_PK_DEPLOYER]
     },
+    mode: {
+      chainId: 34443,
+      url: "https://mainnet.mode.network",
+      accounts: [AMOY_PK_DEPLOYER]
+    },
     avalanche: {
       chainId: 43114,
       url: AVALANCHE_RPC,

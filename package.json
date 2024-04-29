@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test:mode": "npx hardhat run ./src/run.js --network mode",
+    "tokens:kimv2": "npx hardhat run ./src/fetchTokenskim.js --network mode",
+    "tokens:supv2": "npx hardhat run ./src/fetchTokensSup.js --network mode",
     "test:avalanche": "npx hardhat test ./src/test/spec/avalanche/**/*.spec.js",
     "test:arbitrum": "npx hardhat test ./src/test/spec/arbitrum/**/*.spec.js",
     "test:optimism": "npx hardhat test ./src/test/spec/optimism/**/*.spec.js",
