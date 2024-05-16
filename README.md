@@ -2,7 +2,7 @@
 /
 /
 /
-Dex aggregator for Mode chain available [here](https://justadex.xyz). 
+# Dex aggregator for Mode chain available [here](https://justadex.xyz). 
 
 ## About
 
