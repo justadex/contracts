@@ -1,5 +1,4 @@
-![alt text]([http://url/to/img.png](https://www.justadex.xyz/logo/logo-white.svg))
-# <img align="left" alt="JustADex" width="50px" src="https://www.justadex.xyz/logo/logo-white.svg"/>(https://justadex.xyz) JustADex 
+# <img align="left" alt="JustADex" width="150px" src="https://www.justadex.xyz/logo/logo-white.svg"/> JustADex 
 Dex aggregator for Mode chain. UI available [here](https://justadex.xyz). 
 
 ## About
