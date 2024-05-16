@@ -1,4 +1,4 @@
-# <img align="left" alt="JustADex" width="150px" src="https://www.justadex.xyz/logo/logo-white.svg"/> JustADex 
+# <img align="left" alt="JustADex" width="250px" src="https://www.justadex.xyz/logo/logo-white.svg"/> 
 Dex aggregator for Mode chain. UI available [here](https://justadex.xyz). 
 
 ## About
