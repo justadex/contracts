@@ -1,4 +1,4 @@
-# [<img align="left" alt="Java" width="50px" src="[https://github.com/yieldyak/brand-assets/blob/d6414e7e63a7e83b3d42376822a91f516cf325c4/y/y_400x400.png?raw=true](https://www.justadex.xyz/logo/logo-white.svg)" />](https://justadex.xyz) YakSwap 
+# [<img align="left" alt="Java" width="50px" src="[https://github.com/yieldyak/brand-assets/blob/d6414e7e63a7e83b3d42376822a91f516cf325c4/y/y_400x400.png?raw=true](https://www.justadex.xyz/logo/logo-white.svg)" />](https://justadex.xyz) JustADex 
 Dex aggregator for Mode chain. UI available [here](https://justadex.xyz). 
 
 ## About
