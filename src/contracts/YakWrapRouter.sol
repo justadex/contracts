@@ -18,23 +18,23 @@
 // SPDX-License-Identifier: GPL-3.0-only
 pragma solidity ^0.8.0;
 
-import "./interface/IYakRouter.sol";
+import "./interface/IJustRouter.sol";
 import "./interface/IWrapper.sol";
 import "./lib/Maintainable.sol";
 import "./lib/YakViewUtils.sol";
 
-contract YakWrapRouter is Maintainable {
+contract JustWrapRouter is Maintainable {
     using FormattedOfferUtils for FormattedOffer;
     using OfferUtils for Offer;
 
-    IYakRouter public router;
+    IJustRouter public router;
 
     constructor(address _router) {
         setRouter(_router);
     }
 
     function setRouter(address _router) public onlyMaintainer {
-        router = IYakRouter(_router);
+        router = IJustRouter(_router);
     }
 
     function findBestPathAndWrap(

@@ -18,7 +18,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-
 struct Query {
     address adapter;
     address tokenIn;
@@ -44,22 +43,31 @@ struct Trade {
     address[] adapters;
 }
 
-interface IYakRouter {
-
+interface IJustRouter {
     event UpdatedTrustedTokens(address[] _newTrustedTokens);
+    event AddedTrustedTokens(address[] _newTrustedTokens);
     event UpdatedAdapters(address[] _newAdapters);
+    event AddedAdapters(address[] _newAdapters);
     event UpdatedMinFee(uint256 _oldMinFee, uint256 _newMinFee);
     event UpdatedFeeClaimer(address _oldFeeClaimer, address _newFeeClaimer);
-    event YakSwap(address indexed _tokenIn, address indexed _tokenOut, uint256 _amountIn, uint256 _amountOut);
+    event JustSwap(address indexed _tokenIn, address indexed _tokenOut, uint256 _amountIn, uint256 _amountOut);
 
     // admin
     function setTrustedTokens(address[] memory _trustedTokens) external;
+
+    function addTrustedTokens(address[] memory _trustedTokens) external;
+
     function setAdapters(address[] memory _adapters) external;
+
+    function addAdapters(address[] memory _adapters) external;
+
     function setFeeClaimer(address _claimer) external;
+
     function setMinFee(uint256 _fee) external;
 
     // misc
     function trustedTokensCount() external view returns (uint256);
+
     function adaptersCount() external view returns (uint256);
 
     // query
@@ -117,7 +125,7 @@ interface IYakRouter {
         Trade calldata _trade,
         address _to,
         uint256 _fee
-    ) external; 
+    ) external;
 
     function swapNoSplitWithPermit(
         Trade calldata _trade,
@@ -138,5 +146,4 @@ interface IYakRouter {
         bytes32 _r,
         bytes32 _s
     ) external;
-
 }
