@@ -120,7 +120,7 @@ contract JustRouter is Maintainable, Recoverable, IJustRouter {
 
     /**
      * @notice Return tokens to user
-     * @dev Pass address(0) for AVAX
+     * @dev Pass address(0) for ETH
      * @param _token address
      * @param _amount tokens to return
      * @param _to address where funds should be sent to
@@ -376,22 +376,22 @@ contract JustRouter is Maintainable, Recoverable, IJustRouter {
         _swapNoSplit(_trade, msg.sender, _to, _fee);
     }
 
-    function swapNoSplitFromAVAX(
+    function swapNoSplitFromETH(
         Trade calldata _trade,
         address _to,
         uint256 _fee
     ) external payable override {
-        require(_trade.path[0] == WNATIVE, "JustRouter: Path needs to begin with WAVAX");
+        require(_trade.path[0] == WNATIVE, "JustRouter: Path needs to begin with WETH");
         _wrap(_trade.amountIn);
         _swapNoSplit(_trade, address(this), _to, _fee);
     }
 
-    function swapNoSplitToAVAX(
+    function swapNoSplitToETH(
         Trade calldata _trade,
         address _to,
         uint256 _fee
     ) public override {
-        require(_trade.path[_trade.path.length - 1] == WNATIVE, "JustRouter: Path needs to end with WAVAX");
+        require(_trade.path[_trade.path.length - 1] == WNATIVE, "JustRouter: Path needs to end with WETH");
         uint256 returnAmount = _swapNoSplit(_trade, msg.sender, address(this), _fee);
         _unwrap(returnAmount);
         _returnTokensTo(NATIVE, returnAmount, _to);
@@ -414,9 +414,9 @@ contract JustRouter is Maintainable, Recoverable, IJustRouter {
     }
 
     /**
-     * Swap token to AVAX without the need to approve the first token
+     * Swap token to ETH without the need to approve the first token
      */
-    function swapNoSplitToAVAXWithPermit(
+    function swapNoSplitToETHWithPermit(
         Trade calldata _trade,
         address _to,
         uint256 _fee,
@@ -426,6 +426,6 @@ contract JustRouter is Maintainable, Recoverable, IJustRouter {
         bytes32 _s
     ) external override {
         IERC20(_trade.path[0]).permit(msg.sender, address(this), _trade.amountIn, _deadline, _v, _r, _s);
-        swapNoSplitToAVAX(_trade, _to, _fee);
+        swapNoSplitToETH(_trade, _to, _fee);
     }
 }

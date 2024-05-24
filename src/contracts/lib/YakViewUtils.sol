@@ -1,19 +1,15 @@
 // SPDX-License-Identifier: GPL-3.0-only
 pragma solidity >=0.8.4;
 
-import { Offer, FormattedOffer } from "../interface/IYakRouter.sol";
+import { Offer, FormattedOffer } from "../interface/IJustRouter.sol";
 import "./TypeConversion.sol";
-
 
 library OfferUtils {
     using TypeConversion for address;
     using TypeConversion for uint256;
     using TypeConversion for bytes;
 
-    function newOffer(
-        uint _amountIn,
-        address _tokenIn
-    ) internal pure returns (Offer memory offer) {
+    function newOffer(uint256 _amountIn, address _tokenIn) internal pure returns (Offer memory offer) {
         offer.amounts = _amountIn.toBytes();
         offer.path = _tokenIn.toBytes();
     }
@@ -54,18 +50,13 @@ library OfferUtils {
             );
     }
 
-    function getTokenOut(
-        Offer memory _offer
-    ) internal pure returns (address tokenOut) {
-        tokenOut = _offer.path.toAddress(_offer.path.length);  // Last 32 bytes
+    function getTokenOut(Offer memory _offer) internal pure returns (address tokenOut) {
+        tokenOut = _offer.path.toAddress(_offer.path.length); // Last 32 bytes
     }
 
-    function getAmountOut(
-        Offer memory _offer
-    ) internal pure returns (uint amountOut) {
-        amountOut = _offer.amounts.toUint(_offer.path.length);  // Last 32 bytes
+    function getAmountOut(Offer memory _offer) internal pure returns (uint256 amountOut) {
+        amountOut = _offer.amounts.toUint(_offer.path.length); // Last 32 bytes
     }
-
 }
 
 library FormattedOfferUtils {
@@ -77,8 +68,8 @@ library FormattedOfferUtils {
      * Appends new elements to the end of FormattedOffer
      */
     function addToTail(
-        FormattedOffer memory offer, 
-        uint256 amountOut, 
+        FormattedOffer memory offer,
+        uint256 amountOut,
         address wrapper,
         address tokenOut,
         uint256 gasEstimate
@@ -93,8 +84,8 @@ library FormattedOfferUtils {
      * Appends new elements to the beginning of FormattedOffer
      */
     function addToHead(
-        FormattedOffer memory offer, 
-        uint256 amountOut, 
+        FormattedOffer memory offer,
+        uint256 amountOut,
         address wrapper,
         address tokenOut,
         uint256 gasEstimate
@@ -108,5 +99,4 @@ library FormattedOfferUtils {
     function getAmountOut(FormattedOffer memory offer) internal pure returns (uint256) {
         return offer.amounts[offer.amounts.length - 1];
     }
-
 }

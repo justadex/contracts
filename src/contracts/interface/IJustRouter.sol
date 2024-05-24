@@ -115,13 +115,13 @@ interface IJustRouter {
         uint256 _fee
     ) external;
 
-    function swapNoSplitFromAVAX(
+    function swapNoSplitFromETH(
         Trade calldata _trade,
         address _to,
         uint256 _fee
     ) external payable;
 
-    function swapNoSplitToAVAX(
+    function swapNoSplitToETH(
         Trade calldata _trade,
         address _to,
         uint256 _fee
@@ -137,7 +137,7 @@ interface IJustRouter {
         bytes32 _s
     ) external;
 
-    function swapNoSplitToAVAXWithPermit(
+    function swapNoSplitToETHWithPermit(
         Trade calldata _trade,
         address _to,
         uint256 _fee,
